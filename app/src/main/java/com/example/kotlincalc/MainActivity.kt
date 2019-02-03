@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button;
 import android.widget.TextView
+import com.github.keelar.exprk.Expressions
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 
@@ -60,8 +61,11 @@ class MainActivity : AppCompatActivity() {
 
         equal.setOnClickListener{
 
+val result = Expressions()
+.eval(output.getText().toString())
 
 
+ output.setText(result.toString());
 
 
 
